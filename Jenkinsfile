@@ -7,8 +7,8 @@ pipeline
         {
                 steps
                 {    
-               sh 'docker --version'
-               sh 'docker build -t python-flasp-app .'
+               sh "docker --version"
+               sh "docker build -t python-flasp-app ."
                 
                  }
          }
@@ -16,7 +16,7 @@ pipeline
          {
          steps
          {
-          sh 'docker run -d python-flasp-app -p 5000:5000'
+          sh "docker run -d python-flasp-app -p 5000:5000"
          }
          }
      }
