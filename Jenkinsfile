@@ -15,6 +15,7 @@ pipeline
       {
         steps
         {
+	  sh 'chmod 777'
 	  sh "docker build -t python-flasp-app ."
         }
       }
