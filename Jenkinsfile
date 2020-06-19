@@ -7,7 +7,7 @@ pipeline
       {
         steps
         {
-			checkout scm
+	  checkout scm
         }
       }
 	  
@@ -15,8 +15,7 @@ pipeline
       {
         steps
         {
-			checkout scm
-			sh "docker build -t python-flasp-app ."
+	  sh "docker build -t python-flasp-app ."
         }
       }
 	  
