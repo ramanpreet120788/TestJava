@@ -7,8 +7,21 @@ pipeline
       {
         steps
         {
-       checkout scm
+			checkout scm
         }
       }
+	  
+	  stage('Build') 
+      {
+        steps
+        {
+			checkout scm
+			sh "docker build -t python-flasp-app ."
+        }
+      }
+	  
+	  
+	  
+	  
      }
   }
