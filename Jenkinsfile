@@ -3,20 +3,11 @@ pipeline
     agent any
     stages
     {
-      stage('Clone repository') 
+     stage('Build') 
       {
         steps
         {
-	  checkout scm
-        }
-      }
-	  
-	  stage('Build') 
-      {
-        steps
-        {
-	  sh 'chmod 777'
-	  sh "docker build -t python-flasp-app ."
+	  echo 'This is a minimal pipeline.'
         }
       }
 	  
