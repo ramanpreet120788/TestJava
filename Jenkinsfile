@@ -1,6 +1,5 @@
 pipeline
   { 
-    def app
     agent any
     stages
     {
@@ -9,7 +8,7 @@ pipeline
         steps
         {
 	  echo 'This is a minimal pipeline.'
-	  app=docker.build("myPythonApp")
+	  sh 'docker build -t python-flasp-app .'
         }
       }
 	  
